@@ -78,6 +78,5 @@ export function getPostBySlug(slug: string): Post | null {
 }
 
 export function getAllSlugs(): string[] {
-  const files = getPostFiles();
-  return files.map((file) => file.replace(/\.mdx$/, ""));
+  return getAllPosts().map((post) => post.slug);
 }
