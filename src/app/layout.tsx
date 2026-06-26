@@ -10,7 +10,6 @@ const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
-  featureSettings: '"cv01", "cv05", "cv09", "cv11", "ss03", "ss07", "dlig"',
 });
 
 const monaSans = Mona_Sans({
