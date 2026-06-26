@@ -13,45 +13,46 @@ export default function Projects() {
   return (
     <section id="projetos" className="py-24 px-6">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-2">
+        <h2 className="display-lg text-ink mb-10">
           {t.projects.title}
         </h2>
-        <div className="flex items-center gap-2 mb-10">
-          <div className="w-12 h-1 bg-primary rounded-full" />
-          <div className="w-2 h-2 bg-primary-light rounded-full" />
-        </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {sorted.map((project) => {
             const Wrapper = project.url ? "a" : "div";
+            const isHighlighted = project.highlight;
             return (
               <Wrapper
                 key={project.title}
                 href={project.url}
                 target={project.url ? "_blank" : undefined}
                 rel={project.url ? "noopener noreferrer" : undefined}
-                className={`card-lift rounded-xl border ${
-                  project.highlight
-                    ? "border-primary/40 bg-primary/5"
-                    : "border-surface-light bg-surface"
-                } p-6 relative ${project.url ? "cursor-pointer hover:border-primary/60 transition-colors" : ""}`}
+                className={`rounded-2xl p-6 relative transition-transform hover:scale-[1.02] ${
+                  isHighlighted
+                    ? "gradient-spotlight gradient-spotlight-violet text-white"
+                    : "card-surface"
+                } ${project.url ? "cursor-pointer" : ""}`}
               >
-                {project.highlight && (
-                  <span className="absolute -top-2.5 right-4 text-xs font-medium px-2.5 py-0.5 rounded-full bg-primary text-white">
+                {isHighlighted && (
+                  <span className="absolute -top-2.5 right-4 text-xs font-medium px-2.5 py-0.5 rounded-full bg-white text-black">
                     {t.projects.highlight}
                   </span>
                 )}
-                <h3 className="font-semibold text-foreground mb-2">
+                <h3 className="font-semibold text-white mb-2">
                   {project.title}
                 </h3>
-                <p className="text-sm text-muted leading-relaxed mb-4">
+                <p className={`text-sm leading-relaxed mb-4 ${isHighlighted ? "text-white/80" : "text-ink-muted"}`}>
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-xs px-2.5 py-1 rounded-full bg-surface-light text-muted"
+                      className={`text-xs px-2.5 py-1 rounded-full ${
+                        isHighlighted
+                          ? "bg-white/20 text-white"
+                          : "bg-surface-2 text-ink-muted"
+                      }`}
                     >
                       {tag}
                     </span>

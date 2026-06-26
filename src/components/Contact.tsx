@@ -75,15 +75,11 @@ export default function Contact() {
   return (
     <section id="contato" className="py-24 px-6">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-2">
+        <h2 className="display-lg text-ink mb-6">
           {t.contact.title}
         </h2>
-        <div className="flex items-center justify-center gap-2 mb-6">
-          <div className="w-12 h-1 bg-primary rounded-full" />
-          <div className="w-2 h-2 bg-primary-light rounded-full" />
-        </div>
 
-        <p className="text-muted max-w-md mx-auto mb-10">
+        <p className="text-ink-muted max-w-md mx-auto mb-10">
           {t.contact.description}
         </p>
 
@@ -94,10 +90,10 @@ export default function Contact() {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-5 py-3 rounded-xl border border-surface-light bg-surface hover:bg-surface-hover hover:border-primary/30 text-foreground transition-colors"
+              className="pill pill-secondary gap-3"
             >
               {link.icon}
-              <span className="text-sm font-medium">{link.label}</span>
+              <span>{link.label}</span>
             </a>
           ))}
         </div>

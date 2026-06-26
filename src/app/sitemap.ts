@@ -4,7 +4,7 @@ import { getAllPosts } from "@/lib/blog";
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl =
     process.env.NEXT_PUBLIC_SITE_URL ||
-    "https://portfolio-pearl-ten.vercel.app";
+    "https://anthonny-baia.vercel.app";
 
   const staticPages: MetadataRoute.Sitemap = [
     {

@@ -13,18 +13,18 @@ export default function BlogLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <header className="border-b border-surface-light bg-surface/50 backdrop-blur-sm">
+    <div className="min-h-screen bg-canvas text-ink">
+      <header className="border-b border-hairline bg-canvas/80 backdrop-blur-sm">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 h-14 sm:h-16 flex items-center justify-between">
           <Link
             href="/"
-            className="text-base sm:text-lg font-semibold tracking-tight hover:text-primary-light transition-colors"
+            className="text-base sm:text-lg font-semibold tracking-tight text-ink hover:text-white transition-colors"
           >
             AB
           </Link>
           <Link
             href="/"
-            className="text-sm text-muted hover:text-foreground transition-colors"
+            className="text-sm text-ink-muted hover:text-white transition-colors"
           >
             ← Voltar ao Portfolio
           </Link>

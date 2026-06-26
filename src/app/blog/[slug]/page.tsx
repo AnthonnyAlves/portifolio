@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const post = getPostBySlug(slug);
   if (!post) return {};
 
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://portfolio-pearl-ten.vercel.app";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://anthonny-baia.vercel.app";
 
   return {
     title: `${post.title} | Anthonny Baia`,
@@ -59,7 +59,7 @@ export default async function BlogPostPage({ params }: PageProps) {
     day: "numeric",
   });
 
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://portfolio-pearl-ten.vercel.app";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://anthonny-baia.vercel.app";
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -95,26 +95,26 @@ export default async function BlogPostPage({ params }: PageProps) {
       <article className="prose prose-invert max-w-none">
         <Link
           href="/blog"
-          className="text-sm text-muted hover:text-foreground transition-colors inline-flex items-center gap-1 mb-6 not-prose"
+          className="text-sm text-ink-muted hover:text-white transition-colors inline-flex items-center gap-1 mb-6 not-prose"
         >
           ← Voltar ao Blog
         </Link>
 
         <header className="mb-8">
-          <time className="text-sm text-muted">{date}</time>
+          <time className="text-sm text-ink-muted">{date}</time>
           <h1 className="text-3xl sm:text-4xl font-bold mt-1">{post.title}</h1>
-          <p className="text-lg text-muted mt-2">{post.description}</p>
+          <p className="text-lg text-ink-muted mt-2">{post.description}</p>
 
           <div className="flex items-center gap-3 mt-4">
-            <span className="text-sm text-muted">Por {post.author}</span>
+            <span className="text-sm text-ink-muted">Por {post.author}</span>
             {post.tags && post.tags.length > 0 && (
               <>
-                <span className="text-muted">·</span>
+                <span className="text-ink-muted">·</span>
                 <div className="flex flex-wrap gap-2">
                   {post.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-xs px-2 py-1 rounded-full bg-primary/10 text-primary-light"
+                      className="text-xs px-2 py-1 rounded-full bg-white/10 text-white"
                     >
                       {tag}
                     </span>

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Dancing_Script } from "next/font/google";
+import { Inter, Mona_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -10,12 +10,14 @@ const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
+  featureSettings: '"cv01", "cv05", "cv09", "cv11", "ss03", "ss07", "dlig"',
 });
 
-const dancingScript = Dancing_Script({
-  variable: "--font-ds",
+const monaSans = Mona_Sans({
+  variable: "--font-display",
   subsets: ["latin"],
   display: "swap",
+  weight: ["400", "500", "600", "700"],
 });
 
 export const viewport: Viewport = {
@@ -27,7 +29,7 @@ export const viewport: Viewport = {
 
 const baseUrl =
   process.env.NEXT_PUBLIC_SITE_URL ||
-  "https://portfolio-pearl-ten.vercel.app";
+  "https://anthonny-baia.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -36,7 +38,7 @@ export const metadata: Metadata = {
     template: "%s | Anthonny Baia",
   },
   description:
-    "Portfólio profissional de Anthonny Baia — unindo Direito, Tecnologia e Inteligência Artificial para criar soluções práticas e eficientes. Legal Tech, automação e inovação jurídica.",
+    "Portfólio profissional de Anthonny Baia — unindo Direito, Tecnologia e Inteligência Artificial para criar soluções práticas e eficientes.",
   openGraph: {
     title: "Anthonny Baia | Direito & Tecnologia",
     description:
@@ -92,7 +94,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="pt-BR" className={`${inter.variable} ${dancingScript.variable} h-full antialiased`} data-theme="dark" suppressHydrationWarning>
+    <html lang="pt-BR" className={`${inter.variable} ${monaSans.variable} h-full antialiased`} data-theme="dark" suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
