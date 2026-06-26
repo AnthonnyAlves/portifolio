@@ -13,14 +13,17 @@ export default function BlogLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="min-h-screen bg-canvas text-ink">
-      <header className="border-b border-hairline bg-surface-1/80 backdrop-blur-sm">
+    <div className="min-h-screen bg-surface-1 text-ink">
+      <header className="border-b border-hairline bg-surface-2/90 backdrop-blur-sm">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 h-14 sm:h-16 flex items-center justify-between">
           <Link
             href="/"
-            className="text-base sm:text-lg font-semibold tracking-tight text-ink hover:text-white transition-colors"
+            className="flex items-center gap-2 text-white hover:text-accent-blue transition-colors"
           >
-            AB
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <rect width="32" height="32" rx="8" fill="currentColor" className="text-white"/>
+              <path d="M8 24V8h3.5l4.5 10L20.5 8H24v16h-2.5V13l-4 9h-1l-4-9v11H8z" fill="#000"/>
+            </svg>
           </Link>
           <Link
             href="/"

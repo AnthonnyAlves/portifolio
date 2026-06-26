@@ -12,8 +12,12 @@ export default function Differential() {
           {t.differential.title}
         </h2>
 
-        <div className="gradient-spotlight gradient-spotlight-coral rounded-2xl p-8 md:p-10 text-white">
-          <span className="text-4xl mb-4 block">⚡</span>
+        <div className="gradient-spotlight gradient-spotlight-teal rounded-2xl p-8 md:p-10 text-white differential-card">
+          <div className="w-14 h-14 mx-auto mb-5 rounded-2xl bg-white/15 flex items-center justify-center differential-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+            </svg>
+          </div>
           <h3 className="text-xl font-semibold mb-4">
             {t.differential.titleShort}
           </h3>

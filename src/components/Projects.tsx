@@ -29,15 +29,10 @@ export default function Projects() {
                 rel={project.url ? "noopener noreferrer" : undefined}
                 className={`rounded-2xl p-6 relative transition-transform hover:scale-[1.02] ${
                   isHighlighted
-                    ? "gradient-spotlight gradient-spotlight-violet text-white overflow-visible"
+                    ? "gradient-spotlight gradient-spotlight-blue text-white"
                     : "card-surface"
                 } ${project.url ? "cursor-pointer" : ""}`}
               >
-                {isHighlighted && (
-                  <span className="absolute -top-3 left-6 text-xs font-semibold px-3 py-1 rounded-full bg-white text-black shadow-lg">
-                    {t.projects.highlight}
-                  </span>
-                )}
                 <h3 className="font-semibold text-white mb-2">
                   {project.title}
                 </h3>
