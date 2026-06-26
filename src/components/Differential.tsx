@@ -12,7 +12,7 @@ export default function Differential() {
           {t.differential.title}
         </h2>
 
-        <div className="gradient-spotlight gradient-spotlight-violet rounded-2xl p-8 md:p-10 text-white">
+        <div className="gradient-spotlight gradient-spotlight-coral rounded-2xl p-8 md:p-10 text-white">
           <span className="text-4xl mb-4 block">⚡</span>
           <h3 className="text-xl font-semibold mb-4">
             {t.differential.titleShort}

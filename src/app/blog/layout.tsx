@@ -14,7 +14,7 @@ export default function BlogLayout({
 }) {
   return (
     <div className="min-h-screen bg-canvas text-ink">
-      <header className="border-b border-hairline bg-canvas/80 backdrop-blur-sm">
+      <header className="border-b border-hairline bg-surface-1/80 backdrop-blur-sm">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 h-14 sm:h-16 flex items-center justify-between">
           <Link
             href="/"

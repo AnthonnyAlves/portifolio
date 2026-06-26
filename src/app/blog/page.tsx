@@ -36,7 +36,7 @@ function PostCard({ post }: { post: PostMeta }) {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="block p-6 rounded-2xl bg-surface-1 hover:bg-surface-2 transition-colors group"
+      className="block p-6 rounded-2xl bg-surface-2 border border-hairline hover:border-white/20 transition-colors group"
     >
       <article>
         <time className="text-sm text-ink-muted">{date}</time>
