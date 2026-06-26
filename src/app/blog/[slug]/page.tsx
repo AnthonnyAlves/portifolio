@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const post = getPostBySlug(slug);
   if (!post) return {};
 
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://anthonny-baia.vercel.app";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://portfolio-pearl-ten.vercel.app";
 
   return {
     title: `${post.title} | Anthonny Baia`,
@@ -59,7 +59,7 @@ export default async function BlogPostPage({ params }: PageProps) {
     day: "numeric",
   });
 
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://anthonny-baia.vercel.app";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://portfolio-pearl-ten.vercel.app";
 
   const jsonLd = {
     "@context": "https://schema.org",

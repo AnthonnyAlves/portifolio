@@ -27,7 +27,7 @@ export const viewport: Viewport = {
 
 const baseUrl =
   process.env.NEXT_PUBLIC_SITE_URL ||
-  "https://anthonny-baia.vercel.app";
+  "https://portfolio-pearl-ten.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
