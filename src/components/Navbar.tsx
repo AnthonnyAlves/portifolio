@@ -63,7 +63,15 @@ export default function Navbar() {
         >
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
             <rect width="32" height="32" rx="8" fill="currentColor" className="text-white"/>
-            <path d="M8 24V8h3.5l4.5 10L20.5 8H24v16h-2.5V13l-4 9h-1l-4-9v11H8z" fill="#000"/>
+            <g fill="none" stroke="#000" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="16" y1="6" x2="16" y2="8"/>
+              <line x1="10" y1="10" x2="22" y2="10"/>
+              <path d="M10 10L8 16c0 1.1.9 2 2 2s2-.9 2-2L10 10z"/>
+              <path d="M22 10l-2 6c0 1.1.9 2 2 2s2-.9 2-2L22 10z"/>
+              <line x1="16" y1="8" x2="16" y2="22"/>
+              <path d="M13 22h6"/>
+              <text x="11" y="20" fontSize="4" fill="#000" stroke="none" fontFamily="monospace" fontWeight="bold">&lt;/&gt;</text>
+            </g>
           </svg>
         </button>
 
