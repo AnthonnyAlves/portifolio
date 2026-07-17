@@ -95,6 +95,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`${inter.variable} ${monaSans.variable} h-full antialiased`} data-theme="dark" suppressHydrationWarning>
       <head>
+        <meta name="msvalidate.01" content="9B368E314BD278644408C9CFB54E9D30" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
