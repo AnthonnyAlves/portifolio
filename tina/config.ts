@@ -104,6 +104,9 @@ export default defineConfig({
             label: "Body",
             name: "body",
             isBody: true,
+            parser: {
+              type: "markdown",
+            },
           },
         ],
       },
