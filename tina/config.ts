@@ -100,13 +100,10 @@ export default defineConfig({
             required: true,
           },
           {
-            type: "string",
+            type: "rich-text",
             label: "Body",
             name: "body",
             isBody: true,
-            ui: {
-              component: "textarea",
-            },
           },
         ],
       },
